@@ -56,3 +56,7 @@ button.submit{
     color: #FFFFFF;
     text-transform: uppercase;
 }
+
+form.send_msg{
+    background-image: url("../img/back.png");
+}
