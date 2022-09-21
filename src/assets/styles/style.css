@@ -43,6 +43,7 @@ h4.default{
     box-sizing: border-box;
     border-radius: 10px;
     opacity: 0.4;
+    display: block;
 }
 
 button.submit{
