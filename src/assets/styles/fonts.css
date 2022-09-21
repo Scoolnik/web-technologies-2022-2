@@ -21,3 +21,10 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "WorkSans";
+    src: local('WorkSans'), local('WorkSans-SemiBold'), local('WorkSans SemiBold'),
+        url("/static/fonts/WorkSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
