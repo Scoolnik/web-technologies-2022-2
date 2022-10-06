@@ -1,40 +1,18 @@
 @import "./global.css";
 @import "./fonts.css";
 @import "./utils.css";
+@import "./typography.css";
 
-p{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: -0.24px;
-    color: #101828;
+.wrapper, html, body {
+    height: 100%;
 }
 
-h1{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 144%;
-    letter-spacing: 0.32px;
-    color: #101828;
+.content {
+    min-height: 100%;
+    padding-bottom: 262px;
 }
 
-h3{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.38px;
-    color: #101828;
-}
-
-h3.bold{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.38px;
-    color: #101828;
-}
-
-.field{
+.field {
     border: 1px solid #356EAD;
     box-sizing: border-box;
     border-radius: 10px;
@@ -43,83 +21,96 @@ h3.bold{
 }
 
 ul.inline {
-    margin: 0 34px;
-    padding: 0;
     overflow: hidden;
     list-style-type: none;
     display: inline-block;
+    padding-inline-start: 0;
+}
+
+ul.inline li{
+    display: inline;
 }
 
 .inline {
     display: inline-block;
 }
 
-header{
+header {
     margin: 17px 5%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    position: absolute;
+    justify-content: space-between;
+    position: fixed;
     width: 1124px;
     height: 56px;
     background: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
+    padding:16px 24px;
 }
 
-.intro-block{
-    padding-top: 75px;
-    width:1440px;
-    /*height: 900px;*/
-    left: 0px;
-    top: 0px;
-    background: #F2F4F7;
+header li{
+    margin: 0 12px;
 }
 
-.intro-main-text{
-    width: 520px;
+header a{
+    color:#101828;
 }
 
-table.block{
+.intro-block {
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    padding-left: 5%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    color: #101828;
+    background: #F2F4F7 url("./../img/phone screens.png") no-repeat;
+    background-size: 50%;
+    background-position-x: right;
+}
+
+.intro-main-text {
+    width: 600px;
+    padding-top: 160px;
+}
+
+.intro-main-text h2{
+    margin: 0 0 24px;
+}
+
+table.block {
     margin: 0 5%;
 }
 
-table.block td:first-child{
+table.block td:first-child {
     min-width: 600px;
 }
 
-table.block p, table.block h1, table.block h2, table.block h3, table.block h4, table.block h5{
-    max-width:600px;
+table.block p, table.block h1, table.block h2, table.block h3, table.block h4, table.block h5 {
+    max-width: 600px;
 }
 
-button{
-    font-family: 'Inter', sans-serif;
+button.default {
+    font-family: 'SF Pro Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    color: #FFFFFF;
+
     padding: 11px 24px;
-    font-weight: 600;
     text-align: left;
-    color:white;
     width: 132px;
-    height: 58px;
     background: #2D66EE;
     border-radius: 8px;
     border-style: none;
+    vertical-align: middle;
 }
 
-.feedback{
-    padding: 24px;
-    margin-top: 64px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 0px 24px rgba(0, 0, 0, 0.16);
-    border-radius: 12px;
-    width: max-content;
-    height: max-content;
-}
-
-.feedback h3{
-    margin-top: 0;
-}
-
-label{
+label {
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
@@ -127,28 +118,27 @@ label{
     color: #667085;
 }
 
-input{
+input {
     alignment: left;
     display: block;
     height: 35px;
     width: 224px;
     border-style: none;
     border-bottom: 1px solid #D0D5DD;
-    margin-bottom: 10px;
 }
 
-.development-block{
+.development-block {
     margin-top: 75px;
-    width:1440px;
+    width: 1440px;
     height: 493px;
     background: white;
 }
 
-.development-main-text{
+.development-main-text {
     width: 520px;
 }
 
-ul.development-stages{
+ul.development-stages {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -159,66 +149,66 @@ ul.development-stages{
     color: #1D2939;
 }
 
-ul.development-stages li{
+ul.development-stages li {
     margin: 24px;
 }
 
-ul.development-stages li:after{
+ul.development-stages li:after {
     content: " >";
 }
 
-.developed-block{
+.developed-block {
     width: 1440px;
     background: #F2F4F7;
 }
 
-.industries-list ul{
+.industries-list ul {
     padding: 0;
     list-style: none;
     display: inline-block;
     width: 400px;
 }
 
-.industries-list li{
+.industries-list li {
     margin: 15px 0;
 }
 
-.industries-list li:before{
+.industries-list li:before {
     margin-right: 10px;
     vertical-align: middle;
     content: url('data:image/svg+xml,<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="21" r="21" fill="white"/></svg>');
 }
 
-.favourite-projects-block{
+.favourite-projects-block {
     width: 1440px;
     background: white;
 }
 
-.discuss-project-block{
+.discuss-project-block {
     width: 1440px;
     background: #2D66EE;
 }
 
-.discuss-project-description *{
+.discuss-project-description * {
     color: white;
 }
 
-.favourite-projects-nav a{
+.favourite-projects-nav a {
     padding: 16px;
 }
 
-.statistics{
+.statistics {
     display: inline-block;
     alignment: left;
     margin: 25px 48px 25px 0;
 }
 
-.dev-stages-block{
+.dev-stages-block {
     width: 1440px;
     background: white;
 }
 
-.dev-stage{
+.dev-stage {
     width: 392px;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
@@ -228,33 +218,34 @@ ul.development-stages li:after{
     min-height: 172px;
 }
 
-.dev-stage p{
+.dev-stage p {
     font-size: small;
 }
 
-.team-block{
+.team-block {
     width: 1440px;
     background: white;
 }
 
-.book-block{
+.book-block {
     width: 1440px;
     background: #2D66EE;
 }
 
-.faq-block{
+.faq-block {
     width: 1440px;
-    background:white;
+    background: white;
+    padding: 80px 5%;
 }
 
-.faq-question{
+.faq-question {
     min-height: 84px;
     border-style: none;
     border-bottom: 1px solid #D0D5DD;
     margin-bottom: 10px;
 }
 
-.faq-question a{
+.faq-question a {
     background-size: 100% 100%;
     background-image: url("./../img/plus.png");
     display: inline-block;
@@ -263,40 +254,92 @@ ul.development-stages li:after{
     vertical-align: middle;
 }
 
-.faq-question:first-of-type{
+.faq-question:first-of-type {
     border-top: 1px solid #D0D5DD;
 }
 
-footer{
+footer {
     width: 1224px;
-    margin: 20px 5%;
+    height:222px;
+    margin: -262px 5% 40px;
     background: #101828;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     padding: 24px;
 }
 
-footer h1{
+.footer-title {
     color: white;
     text-align: center;
-    margin:0;
+    margin: 0;
+    line-height: 18px;
 }
 
-ul.footer-items{
-    overflow: hidden;
-    list-style-type: none;
+.footer-items {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 54px;
 }
 
-ul.footer-items li{
-    display: inline-block;
-    width: 260px;
-}
-
-ul.footer-items p{
+.footer-items p {
     color: #98A2B3;
+    fill:#98A2B3;
     font-size: small;
+    margin: 0;
+    order: -1;
 }
 
-ul.footer-items h3{
+.footer-items h3 {
     color: white;
+    margin: auto 0;
+}
+
+.footer-bottom{
+    color: white;
+    text-align: center;
+}
+
+.accent, .accent *{
+    color:#2D66EE;
+    fill:#2D66EE;
+}
+
+svg.small-icon{
+    width:24px;
+    height:24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.dedicated-block{
+    padding: 24px;
+    margin-top: 64px;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 0 24px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    width: max-content;
+    height: max-content;
+}
+
+.no-offset-top{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.input-block{
+    min-height: 58px;
+    min-width: 224px;
+}
+
+.contact-form{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
 }

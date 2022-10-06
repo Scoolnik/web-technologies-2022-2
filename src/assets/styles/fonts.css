@@ -28,3 +28,24 @@
         url("/static/fonts/WorkSans-SemiBold.ttf") format("truetype");
     font-weight: 600;
 }
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF Pro Text-Regular'), local('SF Pro Text Regular'),
+    url("/static/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF Pro Text-Medium'), local('SF Pro Text Medium'),
+    url("/static/fonts/SF-Pro-Text-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF Pro Text-Bold'), local('SF Pro Text Bold'),
+    url("/static/fonts/SF-Pro-Text-Bold.otf") format("opentype");
+    font-weight: 700;
+}
