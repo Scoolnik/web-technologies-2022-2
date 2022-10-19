@@ -62,6 +62,15 @@
     letter-spacing: 0.38px;
 }
 
+.subtitle-3-regular{
+    font-family: 'SF Pro Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+}
+
 .headline-regular{
     font-family: 'SF Pro Text', sans-serif;
     font-style: normal;
@@ -147,4 +156,15 @@
     /* identical to box height, or 123% */
 
     letter-spacing: -0.078px;
+}
+
+@media screen and (max-width: 1439px) {
+    .title-1-bold{
+        font-size: 28px;
+        line-height: 144%;
+    }
+
+    .subtitle-3-regular{
+        font-size: 14px;
+    }
 }

@@ -11,60 +11,63 @@
 <body>
 <div class="wrapper">
 <div class="content">
-<header>
-    <ul class="inline subtitle-3-bold accent">
-        <li><h3>IT WEBSITE</h3></li>
-    </ul>
+<div class="header">
+    <div class="header_burger_button hidden">
+        <img width="59px" height="40px" src="./assets/img/navburger button.png" alt="">
+    </div>
+    
+    <h3 class="header_logo subtitle-3-bold accent">IT WEBSITE</h3>
 
-    <ul class="inline subhead-medium">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Cases</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contacts</a></li>
-    </ul>
-
-    <ul class="inline accent subhead-medium">
-        <li><svg class="small-icon accent"><use href="./assets/img/icons.svg#phone"></use></svg>+7 (111) 111 11 11</li>
-        <li>+7 (111) 111 11 11</li>
-    </ul>
-
-    <ul class="inline accent subhead-medium">
-        <li><svg class="small-icon accent"><use href="./assets/img/icons.svg#message"></use></svg>itcompany@mail.com</li>
-    </ul>
-</header>
-<div class="intro-block">
-    <div class="intro-main-text">
-        <h2 class="title-1-bold">Development of <span class="accent">mobile applications</span> applications and <span class="accent">web services</span> of any complexity</h2>
-        <p class="text-medium">We create mobile applications for iOS, Android that transfer your business to mobile applications of your customer device's</p>
+    <div class="header_nav subhead-medium">
+        <a href="#">Services</a>
+        <a href="#">Media</a>
+        <a href="#">Cases</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contacts</a>
     </div>
 
-    <div class="dedicated-block" style="width: 676px">
-        <h3 class="subtitle-2-bold no-offset-top">Leave your contacts and we will call you back <br>within 30 minutes</h3>
-        <form class="contact-form">
-            <div class="input-block inline">
-                <label>Phone number</label>
-                <input type="text" value="" name="phone">
-            </div>
-            <div class="input-block inline">
-                <label>Full name</label>
-                <input type="text" value="" name="name">
-            </div>
-                <button class="default inline">Get consultation</button>
+    <div class="header_contacts accent subhead-medium">
+        <div class="header_contact-number"><svg class="small-icon accent"><use href="./assets/img/icons.svg#phone"></use></svg>+7 (111) 111 11 11</div>
+        <div class="header_contact-number">+7 (111) 111 11 11</div>
+        <div class="header_contact-email"><svg class="small-icon accent"><use href="./assets/img/icons.svg#message"></use></svg>itcompany@mail.com</div>
+    </div>
+</div>
+<div class="intro-block">
+    <div class="intro-content">
+        <div class="intro-main-text">
+            <h2 class="title-1-bold">Development of <span class="accent">mobile applications</span> and <span class="accent">web services</span> of any complexity</h2>
+            <p class="text-medium">We create mobile applications for iOS, Android that transfer your business to mobile applications of your customer device's</p>
+        </div>
 
-        </form>
+        <div class="dedicated-block">
+            <h3 class="title subtitle-2-bold no-offset-top no-offset-bottom">Leave your contacts and we will call you back within 30 minutes</h3>
+            <form class="contact-form">
+                <div class="input-block inline">
+                    <label>Phone number</label>
+                    <input type="text" value="" name="phone">
+                </div>
+                <div class="input-block inline">
+                    <label>Full name</label>
+                    <input type="text" value="" name="name">
+                </div>
+                <button class="default compact_width inline">Get consultation</button>
+            </form>
+        </div>
     </div>
 </div>
 <div class="development-block">
     <div class="development-main-text">
-        <h2 class="title-1-bold">Full development cycle</h2>
+        <h2 class="title-1-bold no-offset-top">Full development cycle</h2>
         <p class="text-medium">We use proven technologies</p>
 
-        <h3 class="subtitle-2-bold">Web</h3>
-        <p>PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt / MySQL / Laravel / GO lang / django / Python</p>
-
-        <h3 class="subtitle-2-bold">Mobile</h3>
-        <p>Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
+        <div class="development-track">
+            <h3 class="title subtitle-2-bold">Web</h3>
+            <p class="subtitle-3-regular">PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt / MySQL / Laravel / GO lang / django / Python</p>
+        </div>
+        <div class="development-track">
+            <h3 class="title subtitle-2-bold">Mobile</h3>
+            <p class="subtitle-3-regular">Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
+        </div>
     </div>
     <div class="development-types">
         <a class="subtitle-2-medium" href="#">iOS development</a>
@@ -178,7 +181,7 @@
                     </div>
             </td>
             <td>
-                <img src="./assets/img/phones.png" alt="">
+                <img src="assets/img/phones.png" alt="">
             </td>
         </tr>
     </table>
@@ -358,8 +361,8 @@
 </div>
 
 </div>
-<footer>
-    <h2 class="footer-title title-1-bold">IT WEBSITE</h2>
+<div class="footer">
+    <h2 class="title title-1-bold">IT WEBSITE</h2>
     <div class="footer-items">
         <p class="subhead-medium"><svg class="small-icon"><use href="./assets/img/icons.svg#phone"></use></svg>Contact nums</p>
         <h3 class="headline-regular">+7 (778) 395 90 26</h3>
@@ -373,7 +376,7 @@
     <div class="footer-bottom">
         <p class="caption-1-regular"><svg width="30" height="16"><use href="./assets/img/icons.svg#continent"></use></svg>  We work throughout the world</p>
     </div>
-</footer>
+</div>
 </div>
 </body>
 </html>

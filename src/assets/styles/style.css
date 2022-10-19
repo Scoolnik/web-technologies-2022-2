@@ -4,6 +4,7 @@
 @import "./typography.css";
 
 .wrapper, html, body {
+    margin-top: 0;
     height: 100%;
 }
 
@@ -27,63 +28,6 @@ ul.inline li{
     display: inline-block;
 }
 
-header {
-    margin: 17px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 1124px;
-    height: 56px;
-    background: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding:16px 24px;
-}
-
-header li{
-    margin: 0 12px;
-}
-
-header a{
-    color:#101828;
-}
-
-.intro-block {
-    width: 1440px;
-    height: 900px;
-    display: flex;
-    padding-left: 5%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-    color: #101828;
-    background: #F2F4F7 url("./../img/phone screens.png") no-repeat;
-    background-size: 50%;
-    background-position-x: right;
-}
-
-.intro-main-text {
-    width: 600px;
-    padding-top: 160px;
-}
-
-.intro-main-text h2{
-    margin: 0 0 24px;
-}
-
-table.block {
-    margin: 0 5%;
-}
-
-table.block td:first-child {
-    min-width: 600px;
-}
-
-table.block p, table.block h1, table.block h2, table.block h3, table.block h4, table.block h5 {
-    max-width: 600px;
-}
-
 button.default {
     font-family: 'SF Pro Text', sans-serif;
     font-style: normal;
@@ -95,11 +39,14 @@ button.default {
 
     padding: 11px 24px;
     text-align: left;
-    width: 132px;
     background: #2D66EE;
     border-radius: 8px;
     border-style: none;
     vertical-align: middle;
+}
+
+.compact_width{
+    width: min-content;
 }
 
 label {
@@ -119,24 +66,109 @@ input {
     border-bottom: 1px solid #D0D5DD;
 }
 
-.development-block {
-    /*margin-top: 80px;*/
+.hidden{
+    display: none;
+}
+
+.header {
+    margin: 17px 5%;
     align-items: center;
-    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 1124px;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding:16px 24px;
+}
+
+.header_nav{
+    width: 324px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo{
+
+}
+
+.header_contacts{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 472px;
+}
+
+.header_contact-number{
+    align-self: baseline;
+}
+
+.header_contact-email{
+    margin-left: 32px;
+}
+
+.header a{
+    color:#101828;
+}
+
+.intro-block {
+    max-width: 1440px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 676px;
+    padding-left: 5%;
+    color: #101828;
+    background: #F2F4F7 url("./../img/phone screens.png") no-repeat;
+    overflow: hidden;
+    background-size: 75%;
+    background-position-y: 55%;
+    background-position-x: 158%;
+}
+
+.intro-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.intro-main-text {
+    max-width: 600px;
+    padding-top: 160px;
+    margin-bottom: 64px;
+}
+
+.intro-main-text h2{
+    margin: 0 0 24px;
+}
+
+.development-block {
+    padding-top: 80px;
+    padding-bottom: 82px;
+    max-width: 1440px;
     display: grid;
     padding-left: 5%;
     grid-template-columns: 1fr 1fr;
-    height: 493px;
     background: white;
 }
 
 .development-main-text{
-    width: 600px;
+
 }
 
 .development-main-text *{
-    margin-top: 0;
     margin-bottom: 32px;
+}
+
+.development-track{
+    max-width: 496px;
+}
+
+.development-track .title{
+    margin-bottom: 16px;
 }
 
 .development-types {
@@ -255,9 +287,9 @@ input {
     border-top: 1px solid #D0D5DD;
 }
 
-footer {
+.footer {
     width: 1224px;
-    height:222px;
+    height: 222px;
     margin: -262px 5% 40px;
     background: #101828;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 24px rgba(0, 0, 0, 0.08);
@@ -265,7 +297,7 @@ footer {
     padding: 24px;
 }
 
-.footer-title {
+.footer .title {
     color: white;
     text-align: center;
     margin: 0;
@@ -316,11 +348,10 @@ a{
 
 .dedicated-block{
     padding: 24px;
-    margin-top: 64px;
     background: #FFFFFF;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 0 24px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
-    width: max-content;
+    width: fit-content;
     height: max-content;
 }
 
@@ -329,9 +360,18 @@ a{
     margin-top: 0;
 }
 
+.no-offset-bottom{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 .input-block{
     min-height: 58px;
     min-width: 224px;
+}
+
+.input-block:not(:last-child){
+    margin-right: 24px;
 }
 
 .contact-form{
@@ -341,7 +381,104 @@ a{
     align-items: center;
 }
 
+.contact-form .input-block, .contact-form button{
+    margin-top: 32px;
+}
+
+.form-block{
+
+}
+
 .store-icon{
     width: 136px;
     height: 40px;
+}
+
+@media screen and (max-width: 1439px) {
+    .header{
+        padding: 25px 32px;
+        margin: 17px 0;
+        width: 100%;
+        height: 90px;
+    }
+
+    .header_logo{
+        margin-left: 17vw;
+    }
+
+    .header_nav{
+        display: none;
+    }
+
+    .header_burger_button{
+        display: inline-block;
+    }
+
+    .header_contact-number{
+        display: none;
+    }
+
+    .header_contacts{
+        align-self: center;
+        width: unset;
+    }
+
+    .intro-block{
+        grid-template-columns: 382px;
+        padding: 32px 33px;
+        height: fit-content;
+    }
+
+    .intro-main-text {
+        padding-top: 106px;
+        margin-bottom: 32px;
+    }
+
+    .intro-block button{
+        width: max-content;
+    }
+
+    .dedicated-block{
+        padding: 32px;
+    }
+
+    .dedicated-block .title{
+        font-size: 16px;
+    }
+
+    .development-block {
+        margin: unset;
+        padding: 32px 40px;
+    }
+
+    .development-main-text{
+        width: 396px;
+    }
+
+    .development-track{
+        width: 320px;
+    }
+
+    .development-track p{
+        font-size: 14px;
+    }
+
+    .development-types{
+        margin-top: 124px;
+    }
+
+    .footer{
+        height: 241px;
+        margin: -281px 0 0;
+        width: 100%;
+        padding: 46px 21px 37px 56px;
+    }
+
+    .footer .title {
+        font-size: 36px;
+    }
+
+    .footer .headline-regular, .footer .subhead-medium{
+        font-size: 14px;
+    }
 }
