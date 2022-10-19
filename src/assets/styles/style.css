@@ -45,6 +45,11 @@ button.default {
     vertical-align: middle;
 }
 
+.button_no_style{
+    background: none;
+    border-style: none;
+}
+
 .button_exit{
     background: none;
     border-style: none;
