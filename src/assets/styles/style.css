@@ -120,29 +120,38 @@ input {
 }
 
 .development-block {
-    margin-top: 75px;
+    /*margin-top: 80px;*/
+    align-items: center;
     width: 1440px;
+    display: grid;
+    padding-left: 5%;
+    grid-template-columns: 1fr 1fr;
     height: 493px;
     background: white;
 }
 
-ul.development-stages {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.38px;
+.development-main-text{
+    width: 600px;
+}
+
+.development-main-text *{
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.development-types {
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(7, 48px);
+}
+
+.development-types a{
     color: #1D2939;
 }
 
-ul.development-stages li {
-    margin: 24px;
-}
-
-ul.development-stages li:after {
-    content: " >";
+.development-types a:after {
+    content: "  >";
+    color: #2D66EE;
 }
 
 .developed-block {
