@@ -17,8 +17,8 @@ console.log(result) // [ 'Павел', 'Иван', 'Эдем', 'Денис', 'В
 
 
 function createCounter() {
-    count = 0; //todo
-    return () => console.log(++this.count);
+    let count = 0;
+    return () => console.log(++count);
 }
 
 const counter1 = createCounter()
