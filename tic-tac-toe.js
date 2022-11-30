@@ -9,17 +9,7 @@ if (document.readyState === 'loading') {
 function init() {    
     const moveEl = document.getElementById('move-value')
     
-    const onMove = (isXTurn) => {
-        let currentMove
-        
-        if (isXTurn) {
-            currentMove = 'X'
-        } else {
-            currentMove = 'O'
-        }
-
-        moveEl.innerText = currentMove
-    }
+    const onMove = (isXTurn) => moveEl.innerText = isXTurn ? 'X' : '0';
 
     const game = TicTacToe.init(
         {
