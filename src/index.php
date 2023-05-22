@@ -99,4 +99,13 @@ function menuToHTML($menu) {
     return $result . "</ul>";
 }
 
-echo menuToHTML($menu);
+echo menuToHTML($menu) . '<hr>';
+
+//6
+function printCitiesWithFilter($regions, $fnFilter) {
+    foreach ($regions as $region => $cities) {
+        echo $region . ":<br>" . implode(", ", array_filter($cities, $fnFilter)) . ".<br>";
+    }
+}
+
+printCitiesWithFilter($regions, fn($str) => mb_substr($str, 0, 1, "UTF-8") === 'К' );
