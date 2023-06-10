@@ -50,16 +50,6 @@ function on_image_uploaded(): void {
         }
     }
 }
-
-// Задание 4 и 5
-if (file_exists('logs/log.txt') && count(file('logs/log.txt')) == 10) {
-    $numOfLogs = count(array_slice(scandir('logs/'), 2)) - 1;
-    rename('logs/log.txt', 'logs/log' . $numOfLogs . '.txt');
-    file_put_contents('logs/log.txt', date('H:i:s d-m-Y') . PHP_EOL);
-} else {
-    file_put_contents('logs/log.txt', date('H:i:s d-m-Y') . PHP_EOL, FILE_APPEND);
-}
-
 ?>
 
 </body>
