@@ -17,7 +17,7 @@ class Logger
         if (count($files) > 2) {
             $this->current_file_path = $this->logs_directory.$files[count($files) - 1];
         }
-        if ($this->current_file_path == null || count(file($this->current_file_path)) > 10) {
+        if ($this->current_file_path == null || count(file($this->current_file_path)) >= 10) {
             $this->current_file_path = $this->new_log_file_path();
         }
     }
