@@ -1,5 +1,5 @@
 <h2>Отзывы</h2>
-<?=$message?>
+<?=$message??''?>
     <form action="/feedback/add/" method="post">
         Оставьте отзыв: <br>
         <input type="text" name="name" placeholder="Ваше имя"><br>

@@ -8,7 +8,7 @@ include '../config/config.php';
 
 $url_array = explode('/', $_SERVER['REQUEST_URI']);
 
-$action = $url_array[2] ?? '';
+$action = !empty($url_array[2]) ? explode('?',$url_array[2])[0] : '';
 
 if ($url_array[1] == "") {
     $page = 'index';

@@ -1,5 +1,5 @@
 <?php
-include '../config/config.php';
+include './config/config.php';
 
 //$page = 'index';
 //if (isset($_GET['page'])) {

@@ -4,7 +4,8 @@
     <?php foreach ($catalog as $item): ?>
         <div>
             <?=$item['name']?><br>
-            <img src="/img/<?=$item['image']?>" alt="" width="100"><br>
+            <a href="/product/?id=<?=$item['id']?>"><img src="/img/<?=$item['image']?>" alt="" width="100"></a><br>
+            <?=$item['description']?><br>
             Цена: <?=$item['price']?><br>
             <button>Купить</button>
             <hr>

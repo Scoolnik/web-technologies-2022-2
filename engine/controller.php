@@ -12,6 +12,13 @@ function prepareParams($page, $action) {
             $params['catalog'] = getCatalog();
             break;
 
+        case 'product':
+            $id = (int)$_GET['id'];
+            $params['title'] = 'Карточка товара';
+            $params['product'] = getProduct($id);
+            $params['feedback'] = getProductFeedback($id);
+            break;
+
         case 'about':
             $params['title'] = 'about';
             $params['phone'] = 444333;
@@ -35,6 +42,11 @@ function prepareParams($page, $action) {
             $news = getOneNews($id);
             $params['title'] = $news['title'] . '. Новости нашего магазина';
             $params['news'] = getOneNews($id);
+            break;
+
+        case 'editfeedback':
+            $params['title'] = 'Изменить отзыв';
+            $params['feedback'] = getFeedback((int)$_GET['id']);
             break;
 
         case 'feedback':

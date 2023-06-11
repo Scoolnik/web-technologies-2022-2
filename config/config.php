@@ -3,9 +3,9 @@ define('TEMPLATES_DIR', '../templates/');
 define('LAYOUTS_DIR', 'layouts/');
 
 /* DB config */
-define('HOST', 'localhost:8889');
-define('USER', 'test');
-define('PASS', '111-555');
+define('HOST', 'localhost:3306');
+define('USER', 'root');
+define('PASS', '');
 define('DB', 'webis');
 
 include "../engine/db.php";
